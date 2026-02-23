@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { Star, Quote } from "lucide-react"
 
 const testimonials = [
@@ -9,7 +10,7 @@ const testimonials = [
     quote:
       "WildGearHub transformed my chaotic pantry into a precision-operated command center. Every ingredient is where it should be. Every. Single. Time.",
     rating: 5,
-    avatar: "MR",
+    image: "/images/avatar-marcus.jpg",
   },
   {
     name: "SARAH K.",
@@ -17,7 +18,7 @@ const testimonials = [
     quote:
       "I thought I was organized before. Then I deployed the full Tactical Storage System. I was not organized before. These containers are military-grade serious.",
     rating: 5,
-    avatar: "SK",
+    image: "/images/avatar-sarah.jpg",
   },
   {
     name: "JAMES T.",
@@ -25,7 +26,7 @@ const testimonials = [
     quote:
       "The vacuum seal kit alone saved me hundreds in food waste. The spice rack? That's just showing off. Absolutely 10/10 field-grade kitchen equipment.",
     rating: 5,
-    avatar: "JT",
+    image: "/images/avatar-james.jpg",
   },
 ]
 
@@ -73,8 +74,13 @@ export function Testimonials() {
               </div>
               {/* Author */}
               <div className="flex items-center gap-3 border-t border-border pt-4">
-                <div className="flex h-10 w-10 items-center justify-center bg-jungle text-xs font-bold text-saffron">
-                  {t.avatar}
+                <div className="relative h-10 w-10 overflow-hidden rounded-full border border-saffron/30">
+                  <Image
+                    src={t.image}
+                    alt={t.name}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div>
                   <div className="text-xs font-bold uppercase text-foreground">
