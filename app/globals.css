@@ -1,0 +1,81 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* WildGearHub Tactical Kitchen Theme */
+  --background: #FAF9F6;
+  --foreground: #1a1a1a;
+  --card: #ffffff;
+  --card-foreground: #1a1a1a;
+  --popover: #ffffff;
+  --popover-foreground: #1a1a1a;
+  --primary: #FF9F00;
+  --primary-foreground: #1a1a1a;
+  --secondary: #2D3A27;
+  --secondary-foreground: #FAF9F6;
+  --muted: #f0efe9;
+  --muted-foreground: #5c5c5c;
+  --accent: #FF3131;
+  --accent-foreground: #ffffff;
+  --destructive: #FF3131;
+  --destructive-foreground: #ffffff;
+  --border: #d4d2c8;
+  --input: #d4d2c8;
+  --ring: #FF9F00;
+  --radius: 0.25rem;
+
+  /* Custom tokens */
+  --saffron: #FF9F00;
+  --jungle: #2D3A27;
+  --chili: #FF3131;
+  --flour: #FAF9F6;
+  --jungle-light: #3d4e35;
+  --jungle-dark: #1e2a1a;
+}
+
+@theme inline {
+  --font-sans: var(--font-space-mono), 'Courier New', monospace;
+  --font-mono: var(--font-space-mono), 'Courier New', monospace;
+  --font-heading: var(--font-oswald), 'Impact', sans-serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+  --radius-xl: calc(var(--radius) + 6px);
+
+  --color-saffron: var(--saffron);
+  --color-jungle: var(--jungle);
+  --color-jungle-light: var(--jungle-light);
+  --color-jungle-dark: var(--jungle-dark);
+  --color-chili: var(--chili);
+  --color-flour: var(--flour);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
