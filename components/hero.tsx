@@ -84,8 +84,8 @@ export function Hero() {
         </div>
 
         {/* Right Image */}
-        <div className="relative flex-1">
-          <div className="relative mx-auto aspect-square max-w-lg overflow-hidden border-2 border-saffron/20">
+        <div className="relative flex-1 w-full">
+          <div className="relative mx-auto aspect-square w-full max-w-lg overflow-hidden border-2 border-saffron/20">
             <Image
               src="/images/hero-pantry.jpg"
               alt="Tactical kitchen pantry organization system with transparent containers and spice racks"
