@@ -158,17 +158,7 @@ export function Products() {
                     ({product.reviews})
                   </span>
                 </div>
-                {/* Price */}
-                <div className="flex items-center gap-3">
-                  <span className="font-heading text-xl font-bold text-jungle">
-                    ${product.price}
-                  </span>
-                  {product.originalPrice && (
-                    <span className="text-xs text-muted-foreground line-through">
-                      ${product.originalPrice}
-                    </span>
-                  )}
-                </div>
+
               </div>
             </article>
           ))}
